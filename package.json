@@ -1,0 +1,31 @@
+{
+  "name": "zmq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "queue": "ts-node pubsub",
+    "build": "rimraf dist && babel src --out-dir dist",
+    "build1": "rimraf legacyDist && babel legacy-src --out-dir legacyDist",
+    "start-pub": "node dist/pub",
+    "start-sub": "node dist/sub",
+    "start-pub1": "node legacyDist/pub",
+    "start-sub1": "node legacyDist/sub"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^8.10.2",
+    "zeromq": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2"
+  }
+}
